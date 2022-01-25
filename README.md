@@ -1,3 +1,5 @@
+<img src="https://freepngimg.com/thumb/terminator/21148-9-terminator-picture.png" width="200" title="Bot" alt="Bot" />  
+
 # Extract FB Group Members
 Extract list of members of a Facebook group.
 
