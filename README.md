@@ -16,3 +16,7 @@ SCREENSHOT :
 UPDATED SCREENSHOT :  
 
 <img width="781" alt="Screenshot 2022-01-25 at 12 34 18 PM" src="https://user-images.githubusercontent.com/6196046/150927609-77ffccc8-661c-48a2-9b09-0f42b536bb0f.png">
+
+UPDATED SCREENSHOT :  
+
+<img width="1792" alt="Screenshot 2022-01-25 at 1 49 49 PM" src="https://user-images.githubusercontent.com/6196046/150938569-da25b6af-2932-4db4-9269-3f5cb0818499.png">
