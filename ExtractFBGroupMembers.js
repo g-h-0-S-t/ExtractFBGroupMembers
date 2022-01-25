@@ -28,7 +28,7 @@ javascript:
     window.document.querySelectorAll('a[href*="/groups/"][href*="/user/"]').forEach(function(v, i, a) {
         //console.log(document.querySelectorAll('a[href*="/groups/"]')[2].text + ' : ' + (i + 1) + ' -> ' + v.href);
         //console.log('Total : ', document.querySelectorAll('a[href*="/groups/"][href*="/user/"]').length);
-        tab.document.write('<tr><td>' + (i + 1) + '</td><td><a href =">' + v.href + '">' + v.href + '</a></td></tr>');
+        tab.document.write('<tr><td>' + (i + 1) + '</td><td><a href ="' + v.href + '">' + v.href + '</a></td></tr>');
     });
     tab.document.write('</tbody></table>');
     tab.document.getElementById('action').innerHTML += '<br><a download="' + window.document.querySelectorAll('a[href*="/groups/"]')[2].text + '.html' + '" href = "data:text/html;base64,' + btoa(unescape(encodeURIComponent(tab.document.documentElement.innerHTML))) + '">Download this List</a>';
