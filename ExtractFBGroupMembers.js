@@ -24,16 +24,16 @@ javascript:
 (function(window) {
     var tab = window.open('about:blank', '_blank');
     var count = 0;
-    tab.document.write('<style>*{background:#000;color:#f0f0f0;font-family:"Gill Sans", sans-serif;text-align: center;margin:20px auto;} a{color:#c3015c;}</style><h1>Group Name : ' + window.document.querySelectorAll('a[href*="/groups/"]')[2].text + '</h1><hr><h2 id="action">Group Members (Total : <span id = "count"></span>)</h2><hr>');
-    tab.document.write('<table border="1" cellspacing="0" cellpadding="10"><thead><tr><th>Serial Number</th><th>Profile Picture</th><th>Profile Name</th><th>Profile URL</th></tr></thead><tbody>');
+    tab.document.write('<style>*{background:#000;color:#f0f0f0;font-family:"Gill Sans", sans-serif;text-align: center;margin:20px auto;} a{color:#c3015c;}</style><h1>Group Name : <a target = "_blank" href = "' + window.location.href + '">' + window.document.querySelectorAll('a[href*="/groups/"]')[2].text + '</a></h1><hr><h2 id="action">Group Members (Total : <span id = "count"></span>)</h2><hr>');
+    tab.document.write('<table border="1" cellspacing="0" cellpadding="10"><thead><tr><th>Serial Number</th><th>Profile Picture</th><th>Profile Name</th><th>Profile Details</th><th>Profile URL</th></tr></thead><tbody>');
     window.document.querySelectorAll('a[href*="/groups/"][href*="/user/"]').forEach(function(v, i, a) {
         if (!v.text && v.querySelector('image')) {
             count += 1;
             tab.document.write('<tr>');
-            tab.document.write('<td>' + count + '</td><td><img src = "' + v.querySelector('image').getAttribute('xlink:href') + '"/></td>');
+            tab.document.write('<td><a target = "_blank" href ="' + v.href + '">' + count + '</a></td><td><a target = "_blank" href ="' + v.href + '"><img src = "' + v.querySelector('image').getAttribute('xlink:href') + '"/></a></td>');
         }
         if (v.text) {
-            tab.document.write('<td><a href ="' + v.href + '">' + v.text + '</a></td><td><a href ="' + v.href + '">' + v.href + '</a></td>');
+            tab.document.write('<td><a target = "_blank" href ="' + v.href + '">' + v.text + '</a></td><td><a target = "_blank" href ="' + v.href + '">' + v.closest('.qzhwtbm6.knvmm38d').nextSibling.nextSibling.textContent + '</a></td><td><a target = "_blank" href ="' + v.href + '">' + v.href + '</a></td>');
             tab.document.write('</tr>');
         }
     });
