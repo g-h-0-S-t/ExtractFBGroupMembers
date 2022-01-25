@@ -8,6 +8,7 @@ USAGE :
  - Run https://github.com/g-h-0-S-t/scrollBot with **window.scrollBy(0, 100000)** (edit the code and replace 1 with 100000).
  - Run **ExtractFBGroupMembers.js** (either as a browser bookmark, or Ctrl+C / Ctrl+P in browser console & hit enter).
  - A new browser tab will open with the list. A download Link is also generated to save the HTML file.
+ - **Pssk, Bonus :** If you're smart, you can just use a Mobile and a Chrome browser on it to do the job. Food for thought!
 
 SCREENSHOT :  
 
