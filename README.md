@@ -1,7 +1,7 @@
 <img src="https://freepngimg.com/thumb/terminator/21148-9-terminator-picture.png" width="200" title="Bot" alt="Bot" />  
 
 # Extract FB Group Members
-Extract list of members of a Facebook group.
+Extract a list of members of a Facebook group.
 
 USAGE :  
  - Open the Facebook Group from where you want to extract a list of members (navigate to members section).
