@@ -24,7 +24,7 @@ javascript:
 (function(window) {
     var tab = window.open('about:blank', '_blank');
     var count = 0;
-    tab.document.write('<style>*{background:#000;color:#f0f0f0;font-family:"Gill Sans", sans-serif;text-align: center;margin:0px auto;} a{color:#c3015c;}</style><h1>Group Name : <a target = "_blank" href = "' + window.location.href + '">' + window.document.querySelectorAll('a[href*="/groups/"]')[2].text + '</a></h1><hr><h2 id="action">Group Members (Total : <span id = "count"></span>)</h2><hr>');
+    tab.document.write('<style>*{background:#000;color:#f0f0f0;font-family:"Gill Sans", sans-serif;text-align: center;margin:0px auto;} a{color:#c3015c;}</style><h1>Facebook Group Members\' Profile Extractor by <a target = "_blank" href = "https://github.com/g-h-0-S-t">gh0$t</a><br>Group Name : <a target = "_blank" href = "' + window.location.href + '">' + window.document.querySelectorAll('a[href*="/groups/"]')[2].text + '</a></h1><hr><h2 id="action">Group Members (Total : <span id = "count"></span>)</h2><hr>');
     tab.document.write('<table id = "theList" border="1" cellspacing="0" cellpadding="10"><thead><tr><th>Serial Number</th><th>Profile Picture</th><th>Profile Name</th><th>Profile Details</th><th>Profile URL</th></tr></thead><tbody>');
     window.document.querySelectorAll('a[href*="/groups/"][href*="/user/"]').forEach(function(v, i, a) {
         if (!tab.document.getElementById('theList').innerHTML.includes(v.href)) {
