@@ -7,7 +7,7 @@ USAGE :
  - Open the Facebook Group from where you want to extract a list of members (navigate to members section).
  - Run https://github.com/g-h-0-S-t/scrollBot with **window.scrollBy(0, 100000)** (edit the code and replace 1 with 100000).
  - After all the members finishes loading, copy the code from **ExtractFBGroupMembers.js**, paste in browser console, hit enter.
- - A new browser tab will open with the list. Save it as HTML or print it as PDF.
+ - A new browser tab will open with the list. A download Link is also generated to save the HTML file.
 
 SCREENSHOT :  
 
