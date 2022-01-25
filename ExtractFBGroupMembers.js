@@ -25,15 +25,20 @@ javascript:
     var tab = window.open('about:blank', '_blank');
     var count = 0;
     tab.document.write('<style>*{background:#000;color:#f0f0f0;font-family:"Gill Sans", sans-serif;text-align: center;margin:20px auto;} a{color:#c3015c;}</style><h1>Group Name : ' + window.document.querySelectorAll('a[href*="/groups/"]')[2].text + '</h1><hr><h2 id="action">Group Members (Total : <span id = "count"></span>)</h2><hr>');
-    tab.document.write('<table border="1" cellspacing="0" cellpadding="10"><thead><tr><th>Serial Number</th><th>Link to Profile</th><th>URL</th></tr></thead><tbody>');
+    tab.document.write('<table border="1" cellspacing="0" cellpadding="10"><thead><tr><th>Serial Number</th><th>Profile Picture</th><th>Profile Name</th><th>Profile URL</th></tr></thead><tbody>');
     window.document.querySelectorAll('a[href*="/groups/"][href*="/user/"]').forEach(function(v, i, a) {
+        if (!v.text && v.querySelector('image')) {
+            count += 1;
+            tab.document.write('<tr>');
+            tab.document.write('<td>' + count + '</td><td><img src = "' + v.querySelector('image').getAttribute('xlink:href') + '"/></td>');
+        }
         if (v.text) {
-            tab.document.write('<tr><td>' + (i + 1) + '</td><td><a href ="' + v.href + '">' + v.text + '</a></td><td><a href ="' + v.href + '">' + v.href + '</a></td></tr>');
-            count++;
-            tab.document.getElementByID('count').text = count;
+            tab.document.write('<td><a href ="' + v.href + '">' + v.text + '</a></td><td><a href ="' + v.href + '">' + v.href + '</a></td>');
+            tab.document.write('</tr>');
         }
     });
     tab.document.write('</tbody></table>');
+    tab.document.getElementById('count').innerHTML = count;
     tab.document.getElementById('action').innerHTML += '<br><a download="' + window.document.querySelectorAll('a[href*="/groups/"]')[2].text + '.html' + '" href = "data:text/html;base64,' + btoa(unescape(encodeURIComponent(tab.document.documentElement.innerHTML))) + '">Download this List</a>';
     tab.document.close();
 })(window);
