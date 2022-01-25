@@ -12,3 +12,7 @@ USAGE :
 SCREENSHOT :  
 
 <img width="1327" alt="Screenshot 2022-01-25 at 11 52 11 AM" src="https://user-images.githubusercontent.com/6196046/150922588-1fa7d696-3b0e-4463-a116-8b31e33bb87c.png">
+
+UPDATED SCREENSHOT :  
+
+<img width="781" alt="Screenshot 2022-01-25 at 12 34 18 PM" src="https://user-images.githubusercontent.com/6196046/150927609-77ffccc8-661c-48a2-9b09-0f42b536bb0f.png">
