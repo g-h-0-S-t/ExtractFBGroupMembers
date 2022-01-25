@@ -23,11 +23,14 @@ javascript:
     'use strict';
 (function(window) {
     var tab = window.open('about:blank', '_blank');
-    tab.document.write('<style>*{background:#000;color:#f0f0f0;font-family:"Gill Sans", sans-serif;text-align: center;margin:20px auto;} a{color:#c3015c;}</style><h1>Group Name : ' + window.document.querySelectorAll('a[href*="/groups/"]')[2].text + '</h1><hr><h2 id="action">Group Members (Total : ', window.document.querySelectorAll('a[href*="/groups/"][href*="/user/"]').length + ')</h2><hr>');
+    var count = 0;
+    tab.document.write('<style>*{background:#000;color:#f0f0f0;font-family:"Gill Sans", sans-serif;text-align: center;margin:20px auto;} a{color:#c3015c;}</style><h1>Group Name : ' + window.document.querySelectorAll('a[href*="/groups/"]')[2].text + '</h1><hr><h2 id="action">Group Members (Total : <span id = "count"></span>)</h2><hr>');
     tab.document.write('<table border="1" cellspacing="0" cellpadding="10"><thead><tr><th>Serial Number</th><th>Link to Profile</th><th>URL</th></tr></thead><tbody>');
     window.document.querySelectorAll('a[href*="/groups/"][href*="/user/"]').forEach(function(v, i, a) {
         if (v.text) {
             tab.document.write('<tr><td>' + (i + 1) + '</td><td><a href ="' + v.href + '">' + v.text + '</a></td><td><a href ="' + v.href + '">' + v.href + '</a></td></tr>');
+            count++;
+            tab.document.getElementByID('count').text = count;
         }
     });
     tab.document.write('</tbody></table>');
